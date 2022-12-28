@@ -42,7 +42,7 @@ const config: MikroOrmModuleSyncOptions = {
   user: 'postgres',
   host:"containers-us-west-144.railway.app" ,
   password:"IllWZ38MLE1HApV52kw0",
-  url: "postgresql://postgres:IllWZ38MLE1HApV52kw0@containers-us-west-144.railway.app:7432/railway",
+  clientUrl: "postgresql://postgres:IllWZ38MLE1HApV52kw0@containers-us-west-144.railway.app:7432/railway",
   metadataProvider: TsMorphMetadataProvider,
   
   migrations: {

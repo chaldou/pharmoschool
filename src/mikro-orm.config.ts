@@ -20,19 +20,36 @@ import { TsMorphMetadataProvider } from '@mikro-orm/reflection';
 //   },
 // })
 
-const config: MikroOrmModuleSyncOptions = {
-    entities: ['./dist/entities'],
-    entitiesTs: ['./src/entities'],
-    dbName: "ruff_school_db_test",
-    type: 'postgresql',
-    password:"Choupy270991",
-    metadataProvider: TsMorphMetadataProvider,
+// const config: MikroOrmModuleSyncOptions = {
+//     entities: ['./dist/entities'],
+//     entitiesTs: ['./src/entities'],
+//     dbName: "ruff_school_db_test",
+//     type: 'postgresql',
+//     password:"Choupy270991",
+//     metadataProvider: TsMorphMetadataProvider,
     
-    migrations: {
-      path: './src/migrations',
-      allOrNothing: true,
-      disableForeignKeys: true,
-    },
+//     migrations: {
+//       path: './src/migrations',
+//       allOrNothing: true,
+//       disableForeignKeys: true,
+//     },
+// }
+
+const config: MikroOrmModuleSyncOptions = {
+  entities: ['./dist/entities'],
+  entitiesTs: ['./src/entities'],
+  dbName: "railway",
+  type: 'postgres',
+  host:"containers-us-west-144.railway.app" ,
+  password:"IllWZ38MLE1HApV52kw0",
+  metadataProvider: TsMorphMetadataProvider,
+  
+  migrations: {
+    path: './src/migrations',
+    allOrNothing: true,
+    disableForeignKeys: true,
+  },
 }
+
 
 export default config;

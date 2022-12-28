@@ -40,9 +40,9 @@ const config: MikroOrmModuleSyncOptions = {
   entitiesTs: ['./src/entities'],
   dbName: "railway",
   user: 'postgres',
-  host:"containers-us-west-144.railway.app" ,
-  password:"IllWZ38MLE1HApV52kw0",
-  clientUrl: "postgresql://postgres:IllWZ38MLE1HApV52kw0@containers-us-west-144.railway.app:7432/railway",
+  host:"containers-us-west-178.railway.app" ,
+  password:"N1kwfdlK99bXoieChzCo",
+  clientUrl: "postgresql://postgres:N1kwfdlK99bXoieChzCo@containers-us-west-178.railway.app:7821/railway",
   metadataProvider: TsMorphMetadataProvider,
   
   migrations: {

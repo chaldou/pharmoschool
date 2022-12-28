@@ -40,6 +40,7 @@ const config: MikroOrmModuleSyncOptions = {
   entitiesTs: ['./src/entities'],
   dbName: "railway",
   user: 'postgres',
+  type: "postgresql",
   host:"containers-us-west-178.railway.app" ,
   password:"N1kwfdlK99bXoieChzCo",
   clientUrl: "postgresql://postgres:N1kwfdlK99bXoieChzCo@containers-us-west-178.railway.app:7821/railway",

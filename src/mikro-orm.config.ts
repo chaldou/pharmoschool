@@ -1,10 +1,10 @@
 import { MikroOrmModule, MikroOrmModuleSyncOptions } from '@mikro-orm/nestjs';
-import * as dotenv from 'dotenv';
+// import * as dotenv from 'dotenv';
 import { Options } from '@mikro-orm/core';
 import { ConfigService } from '@nestjs/config';
 import { TsMorphMetadataProvider } from '@mikro-orm/reflection';
 
-dotenv.config();
+// dotenv.config();
 
 // const config =  MikroOrmModule.forRoot({
 //   entities: ['./dist/entities'],

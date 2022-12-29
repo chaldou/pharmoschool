@@ -11,9 +11,7 @@ import {
     Property,
     Unique,
   } from '@mikro-orm/core';
-  import { Field, ID, ObjectType } from '@nestjs/graphql';
-import { Personnel } from './pesonnel.entity';
-import { Prime } from './prime.entity';
+import { Field, ID, ObjectType } from '@nestjs/graphql';
 import { Retenue } from './retenu-salaire.entity';
 
 // definir enumeration taux, cotisation ect....
@@ -22,8 +20,6 @@ export enum TypeRetenu {
   COTISATIONS = 'COTISATIONS',
   AUTRES = 'AUTRES'
 }
- 
-
 @Entity()
 @ObjectType()
 export class CategorieRetenu {

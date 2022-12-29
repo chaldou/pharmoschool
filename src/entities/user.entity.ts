@@ -10,14 +10,9 @@ import {
     Unique,
   } from '@mikro-orm/core';
   import { Field, ID, ObjectType } from '@nestjs/graphql';
+import { Parent } from './parent.entity';
 import { Personnel } from './pesonnel.entity';
-// import Roles from 'src/modules/user/enum';
-
-// import { Econome } from './economen.entity';
-// import { PersonnelAdministratif } from './personnel-administratif.entity';
-// import { Student } from './student.entity';
-// import { Teacher } from './teacher.entity';
-
+import { Student } from './student.entity';
 
 @Entity()
 @ObjectType()
@@ -75,4 +70,16 @@ export class User {
     nullable: true,
   })
   personnel!: IdentifiedReference<Personnel> | null;
+
+  @OneToOne(() => Parent, (parent) => parent.user, {
+    owner: false,
+    nullable: true,
+  })
+  parent!: IdentifiedReference<Parent> | null;
+
+  @OneToOne(() => Student, (student) => student.user, {
+    owner: false,
+    nullable: true,
+  })
+  student!: IdentifiedReference<Student> | null;
 }

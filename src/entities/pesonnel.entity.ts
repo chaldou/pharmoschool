@@ -15,6 +15,7 @@ import {
 import { CategoriePersonnel } from './categorie-personnel.entity';
 import { PrimePersonnel } from './prime-personnel.entity';
 import { RetenuPersonnel } from './retenu-personnel.entity';
+import { Salle } from './salle.entity';
 import { User } from './user.entity';
 
 
@@ -36,6 +37,10 @@ export class Personnel {
   @Field({ nullable: true })
   @Property({ nullable: true })
   fonction!: string;
+
+  @Field({ nullable: true })
+  @Property({ nullable: true })
+  status!: string;
 
   @Property({ nullable: true })
   @Field(() => Date, { nullable: true })
@@ -73,5 +78,12 @@ export class Personnel {
 
   @OneToMany(() => RetenuPersonnel, retenue => retenue.personnel)
   retenue = new Collection<RetenuPersonnel>(this);
+
+  // only for categorie Teacher
+  @ManyToOne(() => Salle ,{
+    nullable:true,
+    onDelete:'cascade'
+  })
+  salle!:IdentifiedReference<Salle>|null
 
 }

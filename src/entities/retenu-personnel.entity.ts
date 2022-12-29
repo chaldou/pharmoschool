@@ -38,5 +38,4 @@ export class RetenuPersonnel {
     onDelete:'CASCADE'
   })
   personnel!:IdentifiedReference<Personnel>|null
-  
 }
